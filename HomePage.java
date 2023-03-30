@@ -9,6 +9,9 @@ public class HomePage {
 
     static Long MobileHome;
 
+     public static Long getMobileHome(){
+        return MobileHome;
+    }
     public static void main(String[] args) {
 
         // Fetching login details
