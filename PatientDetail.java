@@ -10,7 +10,7 @@ class PatientDetail {
     public void saveDetail(){
         System.out.print("Enter your name : ");
         name=scan.nextLine();
-        System.out.println("Enter yout age : ");
+        System.out.println("Enter your age : ");
         age = scan.nextInt();
         try {
             FileWriter writer = new FileWriter("PatientDetails/"+mobile+".txt",true);
