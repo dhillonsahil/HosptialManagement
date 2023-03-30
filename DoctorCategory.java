@@ -10,7 +10,7 @@ class DoctorCategory implements DC{
     Long mb;
 
     public void run(){
-        mb = HomePage.MobileHome;
+        mb = HomePage.getMobileHome();
         int option5 = Category();
         TakeAppointment tc = new TakeAppointment();
         Calendar calendar = Calendar.getInstance();
