@@ -38,14 +38,18 @@ class UserRegister implements Registration {
                 Boolean tr = false;
                 System.out.println("Mobile number already Exist ! Use New Number or Login ");
                 System.out.println("1. Use New Number ");
-                System.out.println("2. Exit ");
+                System.out.println("2. Login ");
                 int option2 = scan.nextInt();
                 switch(option2){
                     case 1 :{mobile=scan.nextLong();break;}
-                    case 2 : { System.exit(0); break;}
+                    case 2 : {UserLogin ul = new UserLogin();
+                        ul.login(fi);tr=true; break;
+                    }
                     default : {System.out.println("Wrong Input ! Exiting System");System.exit(0);break;}
                 }
-
+                if(tr=true){
+                    break;
+                }
             }
 
             // input password
@@ -69,8 +73,8 @@ class UserRegister implements Registration {
             System.out.println("Unable to Signup ");
         }
         System.out.println("Registered Succesfully ");
-        System.out.println("Login now to book appointment");
-        System.exit(0);
+        System.out.println("You can now Login");
+        // System.exit(0);
         System.out.println("***********************************");
     }
 }

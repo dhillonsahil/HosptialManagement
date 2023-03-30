@@ -9,7 +9,7 @@ public class HomePage {
 
     static Long MobileHome;
 
-    public Long getMobileHome(){
+    public static Long getMobileHome(){
         return MobileHome;
     }
 

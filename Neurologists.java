@@ -54,8 +54,8 @@ class Neurologists implements Neuro{
        
     }
 
-    public void SetMb(long mb, String s){
-        this.mobileNum=mb;
+    public void SetMb(String s){
+        this.mobileNum=HomePage.getMobileHome();
         this.s=s;
     }
 }
