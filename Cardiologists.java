@@ -33,7 +33,7 @@ public class Cardiologists implements cardio{
 
     public void predictDisease(){
         try {
-            FileWriter writer =new  FileWriter("MedicalRecords/"+mobileNum+".txt",true);
+            FileWriter writer =new  FileWriter("MedicalRecords/"+HomePage.mobileNum+".txt",true);
             if(heartAttack==true){
                 System.out.println(Medicines.heartAttck());
                 writer.append(Medicines.heartAttck()  + " as checked on " +s + "\n");

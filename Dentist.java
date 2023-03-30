@@ -37,7 +37,7 @@ class Dentist implements Dent {
     private void predictDisease(){
 
         try {
-            FileWriter writer =new  FileWriter("MedicalRecords/"+mobileNum+".txt",true);
+            FileWriter writer =new  FileWriter("MedicalRecords/"+HomePage.MobileHome+".txt",true);
             if(toothAche==true && holesInTeeth==true){
                 System.out.println(Medicines.toothDecay());
                 writer.append(Medicines.toothDecay() + " as checked on " +s + "\n");

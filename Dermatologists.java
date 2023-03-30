@@ -33,7 +33,7 @@ class Dermatologists implements Derma{
     }
     public void predictDisease(){
         try {
-            FileWriter writer =new  FileWriter("MedicalRecords/"+mobileNum+".txt",true);
+            FileWriter writer =new  FileWriter("MedicalRecords/"+HomePage.mobileNum+".txt",true);
             if(blackMarks==true || acne == true ){
                 System.out.println(Medicines.acne());
                 writer.append(Medicines.acne()  + " as checked on " +s + "\n");

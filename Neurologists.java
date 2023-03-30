@@ -30,7 +30,7 @@ class Neurologists implements Neuro{
 
     public void predictDisease(){
         try {
-            FileWriter writer =new  FileWriter("MedicalRecords/"+mobileNum+".txt",true);
+            FileWriter writer =new  FileWriter("MedicalRecords/"+HomePage.mobileNum+".txt",true);
             if(migrane==true){
                 System.out.println(Medicines.migrane());
                 writer.append(Medicines.migrane()  + " as checked on " +s + "\n");
