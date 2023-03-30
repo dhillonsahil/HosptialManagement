@@ -21,7 +21,8 @@ class TakeAppointment implements TakeAppoint{
         System.out.print("Enter date  ");
         dt = scan.nextInt();
         System.out.print("Enter month  ");
-        mn = scan.nextInt()-1;
+        mn = scan.nextInt();
+        mn-=1;
         System.out.print("Enter year  : ");
         yr = scan.nextInt();
         calendar.set(Calendar.HOUR_OF_DAY , 0);
@@ -34,14 +35,15 @@ class TakeAppointment implements TakeAppoint{
             System.out.println("Getting appointment on :" );
         } catch (IllegalArgumentException e) {
             System.out.println("Wrong Date ");
-            System.out.print("Enter date again ");
+            System.out.print("Enter date again : ");
             dt = scan.nextInt();
-            System.out.print("Enter month  again");
+            System.out.print("Enter month  again : ");
             mn = scan.nextInt();
+            mn-=1;
             System.out.print("Enter year again : ");
             yr = scan.nextInt();
             calendar.setLenient(false);
-            calendar.set(yr, mn-1, dt);
+            calendar.set(yr, mn, dt);
             try {
                 calendar.getTime();
             } catch (Exception e2) {
@@ -54,7 +56,7 @@ class TakeAppointment implements TakeAppoint{
             String filepath = "Appointments/" +h.toString() + ".txt";
             FileWriter writer2 = new FileWriter(filepath, true);
             
-            writer2.append("Appointment with " + docName + " on " + dt + "/"+ ++mn + "/" + yr + "\n");
+            writer2.append("Appointment with " + docName + " on " + dt + "/"+ (mn+1) + "/" + yr + "\n");
             writer2.close();
             System.out.println("Appointment Booked");
         } catch (Exception e) {

@@ -9,11 +9,12 @@ public class HomePage {
 
     static Long MobileHome;
 
-     public static Long getMobileHome(){
+    public Long getMobileHome(){
         return MobileHome;
     }
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        DoctorCategory dc = new DoctorCategory();
         // Fetching login details
         FetchInformation fd = new FetchInformation("fetchDetails");
         fd.t.start();
@@ -45,7 +46,7 @@ public class HomePage {
                 try {
                     tr.join();
                 } catch (Exception e) {
-                    System.out.println("Error 404 ! 2");
+                    System.out.println("Error 404 ! ");
                 }
                 mobileNum = ur.mobileNum;
                 accountPass = ur.accountPass;
@@ -55,6 +56,7 @@ public class HomePage {
                 UserLogin user = new UserLogin();
                 user.login(fd);
                 MobileHome = user.mobileNumber;
+                dc.mb=MobileHome;
 
                 // Fetching latest mobile Number and password list
                 FetchInformation fr = new FetchInformation("fetchDetails");
@@ -87,7 +89,7 @@ public class HomePage {
         int option6 = scan.nextInt();
         switch(option6){
             case 1 : {
-                DoctorCategory dc = new DoctorCategory();
+                // DoctorCategory dc = new DoctorCategory();
                 Thread Thdc = new Thread(dc);
                 Thdc.start();
                 break;

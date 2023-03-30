@@ -10,7 +10,7 @@ class DoctorCategory implements DC{
     Long mb;
 
     public void run(){
-        mb = HomePage.getMobileHome();
+        // mb = HomePage.MobileHome;
         int option5 = Category();
         TakeAppointment tc = new TakeAppointment();
         Calendar calendar = Calendar.getInstance();
@@ -44,7 +44,7 @@ class DoctorCategory implements DC{
                     System.out.println("*************************************");
                     System.out.println("Tell Doctor About Symptoms");
                     Dentist dentist = new Dentist();
-                    dentist.SetMb(HomePage.MobileHome, checkDate+"/"+checkMonth+"/"+checkYear);
+                    dentist.SetMb(mb, checkDate+"/"+checkMonth+"/"+checkYear);
                     Thread thDent = new Thread(dentist);
                     thDent.start();
                     try{
@@ -67,7 +67,7 @@ class DoctorCategory implements DC{
                     System.out.println("*************************************");
                     System.out.println("Tell Doctor About Symptoms");
                     Dermatologists dermatologists = new Dermatologists();
-                    dermatologists.SetMb(HomePage.MobileHome, checkDate+"/"+checkMonth+"/"+checkYear);
+                    dermatologists.SetMb(mb, checkDate+"/"+checkMonth+"/"+checkYear);
                     Thread th = new Thread(dermatologists);
                     th.start();
                     try{
@@ -92,7 +92,7 @@ class DoctorCategory implements DC{
                     System.out.println("*************************************");
                     System.out.println("Tell Doctor About Symptoms");
                     Neurologists neuro = new Neurologists();
-                    neuro.SetMb(HomePage.MobileHome, checkDate+"/"+checkMonth+"/"+checkYear);
+                    neuro.SetMb(mb, checkDate+"/"+checkMonth+"/"+checkYear);
                     Thread th = new Thread(neuro);
                     th.start();
                     try{
@@ -116,7 +116,7 @@ class DoctorCategory implements DC{
                     System.out.println("*************************************");
                     System.out.println("Tell Doctor About Symptoms");
                     Cardiologists cardiologist = new Cardiologists();
-                    cardiologist.SetMb(HomePage.MobileHome, checkDate+"/"+checkMonth+"/"+checkYear);
+                    cardiologist.SetMb(mb, checkDate+"/"+checkMonth+"/"+checkYear);
                     Thread th = new Thread(cardiologist);
                     th.start();
                     try{

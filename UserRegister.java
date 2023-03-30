@@ -42,7 +42,7 @@ class UserRegister implements Registration {
                 int option2 = scan.nextInt();
                 switch(option2){
                     case 1 :{mobile=scan.nextLong();break;}
-                    case 2 : {                        System.exit(0); break;}
+                    case 2 : { System.exit(0); break;}
                     default : {System.out.println("Wrong Input ! Exiting System");System.exit(0);break;}
                 }
 

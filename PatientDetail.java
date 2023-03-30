@@ -14,7 +14,7 @@ class PatientDetail {
         age = scan.nextInt();
         try {
             FileWriter writer = new FileWriter("PatientDetails/"+mobile+".txt",true);
-            writer.append("Name : "+name + ","+"Age : "+age +", Mobile Number : "+mobile + "\n");
+            writer.write("Name : "+name + ","+"Age : "+age +", Mobile Number : "+mobile + "\n");
             writer.close();
         } catch (Exception e) {
             
@@ -66,22 +66,4 @@ class PatientDetail {
         }
     }
 
-    // public void viewAppointments(PatientDetail pt){
-    //     try {
-    //         // System.out.println("Enter patient mobile number : ");
-    //         // Long mb = scan.nextLong();
-    //         File file2 = new File("Appointments/"+pt.mobile.toString()+".txt");
-    //         Scanner sc= new Scanner(file2);
-    //         if(file2.exists()){
-    //             while (sc.hasNextLine()) {
-    //                 System.out.println(sc.nextLine());
-    //             }
-    //             sc.close();
-    //         }else{
-    //             System.out.println("No file found ");
-    //         }
-    //     } catch (Exception e) {
-    //         System.out.println("Unablt to Check Appointments " + e);
-    //     }
-    // }
 }
