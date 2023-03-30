@@ -62,6 +62,7 @@ class DoctorCategory implements DC{
                 int checkMonth = tc.getMonth();
                 int checkYear = tc.getYear();
                 CheckDate ck = new CheckDate();
+                tc.setL(mb);
                 check = ck.check(checkDate, checkMonth, checkYear, TodayDate, TodayMonth, TodayYear);
                 if(check==true){
                     System.out.println("*************************************");

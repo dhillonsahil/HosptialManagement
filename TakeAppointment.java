@@ -12,6 +12,7 @@ interface TakeAppoint {
 class TakeAppointment implements TakeAppoint{
     String doctorName;
     Scanner scan = new Scanner(System.in);
+    Long h;
     int dt,mn,yr;
 
         public void appointment(String docName , Long h) {
@@ -39,7 +40,7 @@ class TakeAppointment implements TakeAppoint{
             dt = scan.nextInt();
             System.out.print("Enter month  again : ");
             mn = scan.nextInt();
-            mn-=1;
+            mn-=1;dt=-1;
             System.out.print("Enter year again : ");
             yr = scan.nextInt();
             calendar.setLenient(false);
@@ -53,14 +54,15 @@ class TakeAppointment implements TakeAppoint{
         }
 
         try {
-            String filepath = "Appointments/" +h.toString() + ".txt";
+            h=HomePage.getMobileHome();
+            String filepath = "Appointments/" +h.toString()+ ".txt";
             FileWriter writer2 = new FileWriter(filepath, true);
             
-            writer2.append("Appointment with " + docName + " on " + dt + "/"+ (mn+1) + "/" + yr + "\n");
+            writer2.append("Appointment with " + docName + " on " + (dt+1) + "/"+ (mn+1) + "/" + yr + "\n");
             writer2.close();
             System.out.println("Appointment Booked");
         } catch (Exception e) {
-            System.out.println("The date is invalid");
+            System.out.println("The date is invalid"+e);
         }
     }
     public int getDate(){
@@ -71,5 +73,8 @@ class TakeAppointment implements TakeAppoint{
     }
     public int getYear(){
         return yr;
+    }
+    public void setL(Long l){
+        this.h=l;
     }
 }

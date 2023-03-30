@@ -77,4 +77,8 @@ class UserRegister implements Registration {
         // System.exit(0);
         System.out.println("***********************************");
     }
+
+    public Long getLp(){
+        return mobileN;
+    }
 }

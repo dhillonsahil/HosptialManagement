@@ -48,8 +48,21 @@ public class HomePage {
                 } catch (Exception e) {
                     System.out.println("Error 404 ! ");
                 }
-                mobileNum = ur.mobileNum;
-                accountPass = ur.accountPass;
+                // mobileNum = ur.mobileNum;
+                // accountPass = ur.accountPass;
+
+                // Fetching latest mobile Number and password list
+                FetchInformation fr = new FetchInformation("fetchDetails");
+                fr.t.start();
+                try {
+                    fr.t.join();
+                } catch (Exception e) {
+                    System.out.println("Error 404 ! Unable to Fetch Latest Details");
+                }
+                mobileNum = fd.getmobileNum();
+                accountPass = fd.getAccountPass();
+                MobileHome=ur.getLp();
+                dc.mb=MobileHome;
                 break;
             }
             case 2: {
