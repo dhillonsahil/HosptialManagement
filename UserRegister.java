@@ -69,6 +69,8 @@ class UserRegister implements Registration {
             System.out.println("Unable to Signup ");
         }
         System.out.println("Registered Succesfully ");
+        System.out.println("Login now to book appointment");
+        System.exit(0);
         System.out.println("***********************************");
     }
 }
