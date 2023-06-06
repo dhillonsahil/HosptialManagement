@@ -1,6 +1,6 @@
 # HosptialManagement
 
-This is a Project of Hospital Management created using Pw skills lab and IntelliIdea
+This is a Project of Hospital Management created using Java 
 
 # Features 
 1. User Login
